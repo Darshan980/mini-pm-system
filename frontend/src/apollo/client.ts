@@ -2,9 +2,9 @@ import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 
 const client = new ApolloClient({
   link: new HttpLink({
-    uri: "http://127.0.0.1:8000/graphql/", // Changed to localhost
+    uri: "https://mini-pm-system.onrender.com/graphql/", // Updated to production URL
     headers: {
-      "x-organization": "test-org", // Match what worked in GraphQL playground
+      "x-organization": "test-org",
     },
   }),
   cache: new InMemoryCache(),
