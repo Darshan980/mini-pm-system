@@ -155,6 +155,30 @@ interface ProjectData {
   project: Project;
 }
 
+// GraphQL Response Types
+interface UpdateTaskResponse {
+  updateTask: {
+    task: Task;
+    success: boolean;
+    message?: string;
+  };
+}
+
+interface CreateTaskResponse {
+  createTask: {
+    task: Task;
+    success: boolean;
+    message?: string;
+  };
+}
+
+interface DeleteTaskResponse {
+  deleteTask: {
+    success: boolean;
+    message?: string;
+  };
+}
+
 const TaskBoard: React.FC<TaskBoardProps> = ({ projectId }) => {
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
@@ -171,8 +195,8 @@ const TaskBoard: React.FC<TaskBoardProps> = ({ projectId }) => {
     errorPolicy: 'all'
   });
 
-  const [updateTask] = useMutation(UPDATE_TASK, {
-    onCompleted: (data) => {
+  const [updateTask] = useMutation<UpdateTaskResponse>(UPDATE_TASK, {
+    onCompleted: (data: UpdateTaskResponse) => {
       if (data.updateTask.success) {
         refetchTasks();
       } else {
@@ -185,8 +209,8 @@ const TaskBoard: React.FC<TaskBoardProps> = ({ projectId }) => {
     }
   });
 
-  const [createTask] = useMutation(CREATE_TASK, {
-    onCompleted: (data) => {
+  const [createTask] = useMutation<CreateTaskResponse>(CREATE_TASK, {
+    onCompleted: (data: CreateTaskResponse) => {
       if (data.createTask.success) {
         refetchTasks();
         setShowCreateForm(false);
@@ -200,8 +224,8 @@ const TaskBoard: React.FC<TaskBoardProps> = ({ projectId }) => {
     }
   });
 
-  const [deleteTask] = useMutation(DELETE_TASK, {
-    onCompleted: (data) => {
+  const [deleteTask] = useMutation<DeleteTaskResponse>(DELETE_TASK, {
+    onCompleted: (data: DeleteTaskResponse) => {
       if (data.deleteTask.success) {
         refetchTasks();
         setDeletingTask(null);
