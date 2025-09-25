@@ -4,7 +4,7 @@ import os
 
 class Command(BaseCommand):
     help = 'Create a default superuser'
-
+    
     def handle(self, *args, **options):
         username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
         email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
@@ -12,6 +12,10 @@ class Command(BaseCommand):
         
         if not User.objects.filter(username=username).exists():
             User.objects.create_superuser(username, email, password)
-            self.stdout.write(f'Superuser {username} created successfully')
+            self.stdout.write(
+                self.style.SUCCESS(f'Superuser {username} created successfully')
+            )
         else:
-            self.stdout.write(f'Superuser {username} already exists')
+            self.stdout.write(
+                self.style.WARNING(f'Superuser {username} already exists')
+            )
