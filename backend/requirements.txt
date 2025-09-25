@@ -7,3 +7,5 @@ graphql-relay==3.2.0
 psycopg2-binary==2.9.10
 sqlparse==0.5.3
 tzdata
+dj-database-url==2.1.0
+whitenoise==6.5.0
