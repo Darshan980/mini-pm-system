@@ -100,7 +100,7 @@ query {
 
 ### 📌 Task Board
 
-![Task Board](screenshots/task.png)
+![Task Board](screnshoots/Task.png)
 
 ---
 
