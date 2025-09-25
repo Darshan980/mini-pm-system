@@ -97,10 +97,13 @@ mutation {
   }
 }
 
-🖥️ Screenshots
-screnshoots\project.png
-screnshoots\Task.png
+## 🖥️ Screenshots  
 
+### 📌 Project Dashboard  
+![Project Dashboard](screenshots/project.png)  
+
+### 📌 Task Board  
+![Task Board](screenshots/task.png)  
 
 📊 Technical Summary
 Architecture
