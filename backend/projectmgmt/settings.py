@@ -84,6 +84,7 @@ CORS_ALLOWED_HEADERS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+     "https://mini-pm-system.vercel.app",
 ]
 
 # Add your production frontend URL when you have it
@@ -99,6 +100,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+     "https://mini-pm-system.vercel.app",
 ]
 
 # Add production URLs to CSRF_TRUSTED_ORIGINS
