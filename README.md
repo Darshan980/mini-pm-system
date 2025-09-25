@@ -3,6 +3,7 @@
 A simplified multi-tenant project management tool built with **Django (GraphQL backend)** and **React (Apollo frontend)**.
 
 This app allows organizations to manage projects, tasks, and team collaboration through comments — with tenant isolation and a clean UI.
+[Click here for live demo](https://mini-pm-system.vercel.app/)
 
 ---
 
@@ -59,8 +60,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Backend runs at: [http://127.0.0.1:8000/graphql/](http://127.0.0.1:8000/graphql/)
-
+Backend(develpoment) runs at: [http://127.0.0.1:8000/graphql/](http://127.0.0.1:8000/graphql/)
+Backend(production)  runs at :[ https://mini-pm-system.onrender.com/graphql/]( https://mini-pm-system.onrender.com/graphql/)
 ### 3. Frontend Setup
 
 ```bash
@@ -69,7 +70,8 @@ npm install
 npm run dev
 ```
 
-Frontend runs at: [http://localhost:5173/](http://localhost:5173/)
+Frontend(development) runs at: [http://localhost:5173/](http://localhost:5173/)
+Frontend(production) runs at :[https://mini-pm-system.vercel.app/](https://mini-pm-system.vercel.app/)
 
 ---
 
