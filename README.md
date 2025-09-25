@@ -96,7 +96,7 @@ query {
 
 ### 📌 Project Dashboard
 
-![Project Dashboard](screenshots/project.png)
+![Project Dashboard](screnshoots/project.png)
 
 ### 📌 Task Board
 
