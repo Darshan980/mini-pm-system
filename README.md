@@ -65,8 +65,12 @@ npm run dev
 
 Frontend runs at: http://localhost:5173/
 
-🔑 Usage
-Example GraphQL Query (Projects)
+---
+
+## 🔑 **Usage**
+
+### Example GraphQL Query (Projects)
+```graphql
 query {
   projects {
     id
@@ -77,27 +81,6 @@ query {
     completedTasks
   }
 }
-
-Example GraphQL Mutation (Create Task)
-mutation {
-  createTask(
-    projectId: "1"
-    title: "Design Homepage"
-    description: "Wireframes and mockups"
-    priority: "high"
-    assignee: "john@company.com"
-    status: "todo"
-  ) {
-    task {
-      id
-      title
-      status
-    }
-    success
-    message
-  }
-}
-
 ## 🖥️ Screenshots  
 
 ### 📌 Project Dashboard  
@@ -106,7 +89,7 @@ mutation {
 ### 📌 Task Board  
 ![Task Board](screenshots/task.png)  
 
-📊 Technical Summary
+###📊 Technical Summary
 Architecture
 
 Backend: Django + Graphene GraphQL with PostgreSQL
@@ -115,7 +98,7 @@ Frontend: React + Apollo Client for GraphQL integration
 
 Multi-tenancy enforced via organization header middleware
 
-Decisions & Tradeoffs
+###Decisions & Tradeoffs
 
 Used GraphQL for flexible queries instead of REST
 
@@ -123,7 +106,7 @@ Focused on CRUD completeness over advanced features
 
 Skipped WebSockets/real-time for simplicity (possible future improvement)
 
-Future Improvements
+###Future Improvements
 
 Real-time subscriptions for comments/tasks
 
@@ -133,6 +116,6 @@ More advanced filtering/search
 
 Docker containerization for deployment
 
-👨‍💻 Author
+###👨‍💻 Author
 
 Darshan S – darshanpoojary980@gmail.com
