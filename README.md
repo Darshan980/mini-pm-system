@@ -1,40 +1,41 @@
-🗂️ Mini Project Management System
+# 🗂️ **Mini Project Management System**
 
-A simplified multi-tenant project management tool built with Django (GraphQL backend) and React (Apollo frontend).
+A simplified multi-tenant project management tool built with **Django (GraphQL backend)** and **React (Apollo frontend)**.  
 
-This app allows organizations to manage projects, tasks, and team collaboration through comments — with tenant isolation and clean UI.
+This app allows organizations to manage projects, tasks, and team collaboration through comments — with tenant isolation and a clean UI.  
 
-📌 Features
-✅ Core
+---
 
-Multi-tenant organizations (X-Organization header)
+## 📌 **Features**
 
-Projects: create, list, view details
+### ✅ Core
+- Multi-tenant organizations (X-Organization header)  
+- Projects: create, list, view details  
+- Tasks: create, update, board view (Todo → In Progress → Done)  
+- Comments: add and view per task  
 
-Tasks: create, update, board view (Todo → In Progress → Done)
+### 🎯 Extras
+- Completion statistics per project  
+- Task priorities and due dates  
+- Project and task forms (with validation)  
+- Delete operations for projects and tasks  
 
-Comments: add and view per task
+---
 
-🎯 Extras
+## 🚀 **Tech Stack**
+- **Backend**: Django, Graphene (GraphQL), PostgreSQL  
+- **Frontend**: React, Apollo Client, TypeScript, CSS  
+- **Database**: PostgreSQL (Docker/local)  
 
-Completion statistics per project
+---
 
-Task priorities and due dates
+## ⚙️ **Setup**
 
-Project and task forms (with validation)
+### 1. Clone Repository
+```bash
+git clone https://github.com/your-username/mini-pm-system.git
+cd mini-pm-system
 
-Delete operations for projects and tasks
-
-🚀 Tech Stack
-
-Backend: Django, Graphene (GraphQL), PostgreSQL
-
-Frontend: React, Apollo Client, TypeScript, CSS
-
-Database: PostgreSQL (Docker/local)
-
-⚙️ Setup
-1. Clone Repository
 git clone https://github.com/your-username/mini-pm-system.git
 cd mini-pm-system
 
